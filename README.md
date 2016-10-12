@@ -1,4 +1,4 @@
-Call Center Common Bundle
+CallCenter\CommonBundle
 ===========
 
 [![Build Status](https://travis-ci.org/diegoangel/call-center-common.svg?branch=master)](https://travis-ci.org/diegoangel/call-center-common)
