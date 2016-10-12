@@ -1,0 +1,45 @@
+{
+    "name": "diego/call-center-common-bundle",
+    "license": "GPL",
+    "description": "Call Center CommonBundle",
+    "type": "symfony-bundle",
+    "authors": [
+        {
+            "name": "Diego Rivarola",
+            "email": "diegoangel77@rocketmail.com",
+            "homepage": "http://stackoverflow.com/story/diegorivarola"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CallCenter\\CommonBundle\\": ""
+        },
+        "classmap": []
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=5.3.9",
+        "symfony/form": "^3.0",
+        "symfony/framework-bundle": "^3.0",
+        "symfony/security-bundle": "^3.0",
+        "symfony/twig-bundle": "^3.0"
+    },
+    "require-dev": {
+        "doctrine/doctrine-bundle": "~1.6",
+        "swiftmailer/swiftmailer": "~4.3|~5",
+        "symfony/console": "^3.0",
+        "symfony/phpunit-bridge": "~2.7|~3.0",
+        "symfony/validator": "^3.0",
+        "symfony/yaml": "^3.0",
+        "willdurand/propel-typehintable-behavior": "~1.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    }
+}
