@@ -23,18 +23,24 @@ matrix:
 sudo: false
 
 cache:
-  directories:
-    - $HOME/.composer/cache
+    directories:
+        - $HOME/.composer/cache
 
 before_install:
-  - composer selfupdate
-  - if [ "$SYMFONY_VERSION" != "" ]; then composer require "symfony/symfony:${SYMFONY_VERSION}" --no-update; fi;
-  - if [ "$TRAVIS_PHP_VERSION" != "hhvm" ]; then echo "memory_limit=2G" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini; fi;
+    - composer selfupdate
+    - PHP=$TRAVIS_PHP_VERSION
+    # Matrix lines for intermediate PHP versions are skipped for pull requests
+    - if [[ ! $deps && ! $PHP = ${MIN_PHP%.*} && ! $PHP = hhvm* && $TRAVIS_PULL_REQUEST != false ]]; then deps=skip; skip=1; fi
+    # A sigchild-enabled-PHP is used to test the Process component on the lowest PHP matrix line
+    - if [[ ! $deps && $PHP = ${MIN_PHP%.*} && ! -d php-$MIN_PHP/sapi ]]; then wget http://museum.php.net/php5/php-$MIN_PHP.tar.bz2 -O - | tar -xj; (cd php-$MIN_PHP; ./configure --enable-sigchild --enable-pcntl; make -j2); fi
+    - if [[ ! $PHP = hhvm* ]]; then INI_FILE=~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini; else INI_FILE=/etc/hhvm/php.ini; fi
 
-install: composer update --prefer-dist --no-interaction $COMPOSER_FLAGS
+install:
+    - composer update --prefer-dist --no-interaction $COMPOSER_FLAGS
+    - if [[ ! $PHP = hhvm* ]]; then php -i; else hhvm --php -r 'print_r($_SERVER);print_r(ini_get_all());'; fi
 
 script:
-  - phpunit --coverage-text
+     phpunit --coverage-text
 
 notifications:
-  email: diegoangel77@rocketmail.com
+    email: diegoangel77@rocketmail.com
