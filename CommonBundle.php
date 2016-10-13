@@ -4,6 +4,7 @@ namespace CallCenter\CommonBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class CallCenterCommonBundle extends Bundle
+class CommonBundle extends Bundle
 {
+
 }
