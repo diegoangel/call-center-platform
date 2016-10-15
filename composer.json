@@ -22,7 +22,8 @@
         "symfony/form": "^3.0",
         "symfony/framework-bundle": "^3.0",
         "symfony/security-bundle": "^3.0",
-        "symfony/twig-bundle": "^3.0"
+        "symfony/twig-bundle": "^3.0",
+        "fresh/doctrine-enum-bundle": "~4.7"
     },
     "require-dev": {
         "doctrine/doctrine-bundle": "~1.6",
