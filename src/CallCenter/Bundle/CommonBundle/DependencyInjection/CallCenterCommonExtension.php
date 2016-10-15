@@ -1,6 +1,6 @@
 <?php
 
-namespace CallCenter\CommonBundle\DependencyInjection;
+namespace CallCenter\Bundle\CommonBundle\DependencyInjection;
 
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
