@@ -1,0 +1,6 @@
+{
+  "name": "Call-center-platform",
+  "tagline": "Call Center platform shareable Bundle for sales agents",
+  "body": "Call Center Platform\r\n===========\r\n\r\n[![Build Status](https://travis-ci.org/diegoangel/call-center-common-bundle.svg?branch=master)](https://travis-ci.org/diegoangel/call-center-common-bundle)\r\n\r\nA Symfony project created on October 12, 2016, 2:22 am.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
