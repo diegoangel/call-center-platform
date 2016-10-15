@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Embeddable;
+namespace CallCenter\Bundle\CommonBundle\Embeddable;
 
 /**
  * @Embeddable
