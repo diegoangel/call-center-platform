@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit colors="true" bootstrap="./vendor/autoload.php">
+<phpunit colors="true" bootstrap="vendor/autoload.php">
     <testsuites>
-        <testsuite name="Call Center CommonBundle Test Suite">
-            <directory>./Tests/</directory>
+        <testsuite name="Call Center Test Suite">
+            <directory suffix="Test.php">./src/*/Bundle/*Bundle/Tests</directory>
+            <directory suffix="Test.php">./src/*/Component/*/Tests</directory>
         </testsuite>
     </testsuites>
-
     <filter>
         <whitelist>
-            <directory>./</directory>
+            <directory>./src/CallCenter/</directory>
             <exclude>
-                <directory>./Resources</directory>
-                <directory>./Tests</directory>
-                <directory>./vendor</directory>
+                <directory>./src/CallCenter/Bundle/*Bundle/DataFixtures</directory>
+                <directory>./src/CallCenter/Bundle/*Bundle/Resources</directory>
+                <directory>./src/CallCenter/Bundle/*Bundle/Tests</directory>
+                <directory>./src/CallCenter/Bundle/*/vendor</directory>
+                <directory>./src/CallCenter/Component/*/Resources</directory>
+                <directory>./src/CallCenter/Component/*/Tests</directory>
+                <directory>./src/CallCenter/Component/*/vendor</directory>
             </exclude>
         </whitelist>
     </filter>

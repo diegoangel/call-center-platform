@@ -1,7 +1,7 @@
 {
-    "name": "diego/call-center-common-bundle",
+    "name": "diego/call-center-platform",
     "license": "GPL",
-    "description": "Call Center CommonBundle",
+    "description": "Call Center Platform",
     "type": "symfony-bundle",
     "authors": [
         {
@@ -16,11 +16,6 @@
             "CallCenter\\Component\\": "src/"
         },
         "classmap": []
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
     },
     "require": {
         "php": ">=5.5.9",

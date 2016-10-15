@@ -1,11 +1,11 @@
 <?php
 
-namespace Service;
+namespace CallCenter\Component\Encrypter;
 
 use gnupg;
 
 /**
- * Service class to encrypt and decrypt data using gnupg.
+ * Class to encrypt and decrypt data using gnupg.
  *
  * The intended use of this class is to encrypt data that will be decrypted with a passphrase provided by a user trough a form
  * in a webpage, therefore, GnuPG v 1.0 SHOULD be used in order to send the passphrase as plain text trough HTTP.
@@ -13,19 +13,10 @@ use gnupg;
  *
  * A valid key pair MUST exists in the server, otherwise this class will throw an exception. See the docs in Confluence.
  *
- * How to use this service inside a controller to encrypt data:
- *
- *   $encrypteddata = $this->get('gnupgencrypter')->encrypt('Data to be encrypted');
- *
- * How to use this service inside a controller to decrypt data:
- *
- *   $this->get('gnupgencrypter')->decrypt($encrypteddata);
- *
- * @see http://172.18.10.170:8090/x/moAT MOA internal documentation in Confluence
  * @see http://php.net/manual/en/book.gnupg.php
  * @see https://www.gnupg.org/gph/en/manual/c14.html#AEN25
  */
-class GnupgEncrypterService
+class GnuPG
 {
     /**
      * @var string
@@ -67,9 +58,9 @@ class GnupgEncrypterService
         $this->gnupghome = $gnupghome;
         $this->logger = $logger;
 
-        $this->setGnupgEnvVariable();
+        $this->setGnuPGEnvVariable();
         $this->gnupg = new gnupg();
-        $this->setGnupgErrorMode();
+        $this->setGnuPGErrorMode();
     }
 
     /**
@@ -123,7 +114,7 @@ class GnupgEncrypterService
     /**
      * Setup the GnuPG path environment variable.
      */
-    private function setGnupgEnvVariable()
+    private function setGnuPGEnvVariable()
     {
         putenv('GNUPGHOME='.$this->gnupghome);
     }
@@ -160,8 +151,9 @@ class GnupgEncrypterService
     /**
      * Set the gnupg extension eror mode to throw an Exception in case of failure.
      */
-    private function setGnupgErrorMode()
+    private function setGnuPGErrorMode()
     {
         $this->gnupg->seterrormode(gnupg::ERROR_EXCEPTION);
+
     }
 }
