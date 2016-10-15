@@ -12,8 +12,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "CallCenter\\Bundle\\": "src/",
-            "CallCenter\\Component\\": "src/"
+            "CallCenter\\Bundle\\": "src/CallCenter/Bundle/",
+            "CallCenter\\Component\\": "src/CallCenter/Component/"
         },
         "classmap": []
     },
