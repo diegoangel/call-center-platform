@@ -12,7 +12,7 @@ public function registerBundles()
 {
     $bundles = [
         // Other bundles...
-        new CallCenter\CommonBundle\CallCenterCommonBundle(),
+        new CallCenter\Bundle\CommonBundle(),
         new Fresh\DoctrineEnumBundle\FreshDoctrineEnumBundle(),
     ];
 }
