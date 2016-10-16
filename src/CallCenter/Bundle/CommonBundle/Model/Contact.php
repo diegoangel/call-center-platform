@@ -2,7 +2,7 @@
 
 namespace CallCenter\CommonBundle\Model;
 
-abstract class BaseContact implements BaseContactInterface
+abstract class Contact implements ContactInterface
 {
     /**
      * @var int

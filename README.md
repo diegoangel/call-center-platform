@@ -1,7 +1,7 @@
 Call Center Platform
 ===========
 
-[![Build Status](https://travis-ci.org/diegoangel/call-center-common-bundle.svg?branch=master)](https://travis-ci.org/diegoangel/call-center-common-bundle)
+[![Build Status](https://travis-ci.org/diegoangel/call-center-platform.svg?branch=master)](https://travis-ci.org/diegoangel/call-center-platform)
 
 ### Register the bundle
 
