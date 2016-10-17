@@ -17,7 +17,7 @@
         },
         "classmap": []
     },
-    "minimum-stability": "alpha",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.5.9",
         "symfony/framework-bundle": "^3.1",
