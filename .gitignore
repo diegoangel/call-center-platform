@@ -48,3 +48,5 @@
 */Entity/*~
 
 *.sublime*
+
+composer.lock
