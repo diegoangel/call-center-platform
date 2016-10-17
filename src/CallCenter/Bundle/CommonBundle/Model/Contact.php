@@ -2,6 +2,8 @@
 
 namespace CallCenter\CommonBundle\Model;
 
+use CallCenter\CommonBundle\Model\ContactInterface;
+
 abstract class Contact implements ContactInterface
 {
     /**
