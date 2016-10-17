@@ -1,6 +1,6 @@
 {
     "name": "diego/call-center-platform",
-    "license": "GPL",
+    "license": "GPL-3.0",
     "description": "Call Center Platform",
     "type": "symfony-bundle",
     "authors": [

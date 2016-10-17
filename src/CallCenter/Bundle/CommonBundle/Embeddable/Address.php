@@ -2,8 +2,10 @@
 
 namespace CallCenter\Bundle\CommonBundle\Embeddable;
 
+use Doctrine\ORM\Mapping as ORM;
+
 /**
- * @Embeddable
+ * @ORM\Embeddable
  */
 class Address
 {

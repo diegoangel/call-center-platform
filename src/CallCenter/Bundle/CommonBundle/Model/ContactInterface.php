@@ -2,7 +2,7 @@
 
 namespace CallCenter\CommonBundle\Model;
 
-interface BaseContactInterface
+interface ContactInterface
 {
     /**
      * Get id.

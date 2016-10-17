@@ -3,6 +3,7 @@
 namespace CallCenter\Component\Encrypter;
 
 use gnupg;
+use Exception;
 
 /**
  * Class to encrypt and decrypt data using gnupg.
