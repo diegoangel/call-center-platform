@@ -15,14 +15,21 @@ public function registerBundles()
 {
     $bundles = [
         // Other bundles...
-        new CallCenter\Bundle\CommonBundle(),
         new Fresh\DoctrineEnumBundle\FreshDoctrineEnumBundle(),
+        new FOS\RestBundle\FOSRestBundle(),
+        new FOS\UserBundle\FOSUserBundle(),
+        new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
+        new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+        new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+        new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),        
+        new CallCenter\Bundle\CommonBundle(),
     ];
 
     //...
     if (in_array($this->getEnvironment(), ['dev', 'test'])) {
         //...
         $bundles[] = new Hautelook\AliceBundle\HautelookAliceBundle();
+        $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();        
     }    
 }
 ```
