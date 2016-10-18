@@ -19,7 +19,7 @@
     },
     "require": {
         "php": ">=5.5.9",
-        "symfony/framework-bundle": "~2.3",
+        "symfony/framework-bundle": "^2.3",
         "symfony/twig-bundle": "~2.3",
         "fresh/doctrine-enum-bundle": "~4.7",
         "friendsofsymfony/user-bundle": "~2.0@dev",

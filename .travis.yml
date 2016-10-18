@@ -27,8 +27,9 @@ cache:
         - $HOME/.composer/cache
 
 before_install:
-    - composer selfupdate
     - PHP=$TRAVIS_PHP_VERSION
+    - if [[ "$PHP" != "5.6" && "$PHP" != "hhvm" ]]; then phpenv config-rm xdebug.ini; fi
+    - composer selfupdate
     # Matrix lines for intermediate PHP versions are skipped for pull requests
     - if [[ ! $deps && ! $PHP = ${MIN_PHP%.*} && ! $PHP = hhvm* && $TRAVIS_PULL_REQUEST != false ]]; then deps=skip; skip=1; fi
     # A sigchild-enabled-PHP is used to test the Process component on the lowest PHP matrix line
@@ -40,7 +41,7 @@ install:
     - if [[ ! $PHP = hhvm* ]]; then php -i; else hhvm --php -r 'print_r($_SERVER);print_r(ini_get_all());'; fi
 
 script:
-     phpunit --coverage-text
+     phpunit
 
 notifications:
     email: diegoangel77@rocketmail.com
