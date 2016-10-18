@@ -6,6 +6,13 @@ Call Center Platform
 
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/4b444c8f-b095-4174-a333-11477268f697/small.png)](https://insight.sensiolabs.com/projects/4b444c8f-b095-4174-a333-11477268f697)
 
+### Introduction
+
+This bundle was created to be used as a frontend by sales agents from a call center and as backend by team leaders and managers. It has features to manage contacts, sales, users, reports, etc ...
+
+It depends on several others bundles that you have to install along with this. 
+Likewise, this bundle is made up of components and one or more bundles using this components and exposing its logic through Symfony services.
+
 ### Register the bundle
 
 To start using the bundle, register it in `app/AppKernel.php`:
