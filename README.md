@@ -33,3 +33,5 @@ public function registerBundles()
     }    
 }
 ```
+### Configure the bundle
+
