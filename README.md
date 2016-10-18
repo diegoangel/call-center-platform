@@ -8,7 +8,7 @@ Call Center Platform
 
 ### Introduction
 
-This bundle was created to be used as a frontend by sales agents from a call center and as backend by team leaders and managers. It has features to manage contacts, sales, users, reports, etc ...
+This bundle was created for building symfony web applications to be used as a frontend by call center sales agents and as backend by team leaders and managers. It has features to manage contacts, sales, users, reports, etc ...
 
 It depends on several others bundles that you have to install along with this. 
 Likewise, this bundle is made up of components and one or more bundles using this components and exposing its logic through Symfony services.
