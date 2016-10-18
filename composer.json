@@ -30,8 +30,6 @@
         "doctrine/doctrine-fixtures-bundle": "^2.2"
     },
     "require-dev": {
-        "hautelook/alice-bundle": "^1.3",
-        "doctrine/doctrine-fixtures-bundle": "^2.3"
     },
     "extra": {
         "branch-alias": {
