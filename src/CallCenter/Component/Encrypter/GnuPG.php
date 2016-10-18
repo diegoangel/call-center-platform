@@ -87,7 +87,6 @@ class GnuPG
             return $chiperdata;
         } catch (Exception $e) {
             $this->logger->error($e->getMessage());
-            //TODO: handle Exception properly
         }
     }
 
@@ -108,7 +107,6 @@ class GnuPG
             return $this->gnupg->decrypt($data);
         } catch (Exception $e) {
             $this->logger->error($e->getMessage());
-            //TODO: handle Exception properly
         }
     }
 
@@ -132,6 +130,7 @@ class GnuPG
     private function getFingerprint()
     {
         try {
+            $fingerprint = '';
             $records = $this->gnupg->keyinfo('');
             foreach ($records as $record) {
                 foreach ($record['subkeys'] as $subkey) {
@@ -145,7 +144,6 @@ class GnuPG
             return $fingerprint;
         } catch (Exception $e) {
             $this->logger->error($e->getMessage());
-            //TODO: handle Exception properly
         }
     }
 
