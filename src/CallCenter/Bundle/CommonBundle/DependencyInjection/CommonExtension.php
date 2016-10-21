@@ -7,7 +7,7 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 
-class CallCenterCommonExtension extends Extension
+class CommonExtension extends Extension
 {
     /**
      * {@inheritdoc}
