@@ -23,7 +23,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('acme_social');
+        $rootNode = $treeBuilder->root('call_center_platform');
 
         $rootNode
             ->children()
