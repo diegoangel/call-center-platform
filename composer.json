@@ -28,7 +28,7 @@
         "stof/doctrine-extensions-bundle": "^1.2",
         "jms/serializer-bundle": "^1.0",
         "doctrine/doctrine-fixtures-bundle": "^2.2",
-        "gos/web-socket-bundle": "^1.8",
+        "gos/web-socket-bundle": "^1.8"
     },
     "require-dev": {
         "doctrine/doctrine-bundle": "~1.3",
