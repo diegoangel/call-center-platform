@@ -5,7 +5,7 @@ namespace CallCenter\CommonBundle\Entity;
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
-use FOS\UserBundle\Entity\User as FOSUser;
+use FOS\UserBundle\Model\User as FOSUser;
 
 /**
  * @ORM\MappedSuperclass
