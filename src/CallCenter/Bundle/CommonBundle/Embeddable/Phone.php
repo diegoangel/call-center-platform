@@ -1,6 +1,6 @@
 <?php
 
-namespace CallCenter\Bundle\CommonBundle\Embeddable;
+namespace CallCenter\CommonBundle\Embeddable;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -12,7 +12,7 @@ class Phone
     /*
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
-     * @ORM\GEneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
     */
     private $id;
 

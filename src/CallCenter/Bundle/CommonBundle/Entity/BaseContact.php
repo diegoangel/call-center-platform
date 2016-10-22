@@ -30,12 +30,16 @@ abstract class BaseContact extends Contact
     private $lastName;
 
     /*
-     * @ORM\Column(nam"phone_id" type="integer")
+     * @ORM\Column(name="phone_id" type="integer")
      */
     private $phones;
 
     /*
-     * @ORM\Column(name="deleted_at", type="datetime")
+     * @ORM\Column(
+     *      name="deleted_at",
+     *      type="datetime",
+     *      nullable=true
+     * )
      */
     private $deletedAt;
 

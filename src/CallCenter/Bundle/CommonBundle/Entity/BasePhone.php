@@ -7,19 +7,24 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use CallCenter\CommonBundle\Embeddable\Phone as PhoneEmbeddable;
 
-/*
- * @ORM\Entity
+/**
+ * @ORM\MappedSuperclass
  * @Gedmo\SoftDeleteable(
- *      fieldName="deletedAt",
+ *      fieldName="deleted_at",
  *      timeAware=false
  * )
  */
-class BasePhone
+abstract class BasePhone
 {
     /**
-     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\Column(
+     *      name="id",
+     *      type="integer"
+     * )
+     * @ORM\GeneratedValue(
+     *      strategy="IDENTITY"
+     * )
      */
     private $id;
 
@@ -42,8 +47,12 @@ class BasePhone
      */
     private $phone;
 
-    /*
-     * @ORM\Column(type="datetime", nullable=true)
+    /**
+     * @ORM\Column(
+     *      name="delete_at",
+     *      type="datetime",
+     *      nullable=true
+     * )
      */
     private $deletedAt;
 }
