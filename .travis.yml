@@ -28,7 +28,7 @@ cache:
 
 before_install:
     - PHP=$TRAVIS_PHP_VERSION
-    - if [[ "$PHP" != "hhvm" ]]; then phpenv config-rm xdebug.ini; fi
+    - if [[ $PHP != hhvm* ]]; then phpenv config-rm xdebug.ini; fi
     - composer selfupdate
     # Matrix lines for intermediate PHP versions are skipped for pull requests
     - if [[ ! $deps && ! $PHP = ${MIN_PHP%.*} && ! $PHP = hhvm* && $TRAVIS_PULL_REQUEST != false ]]; then deps=skip; skip=1; fi

@@ -1,6 +1,6 @@
 <?php
 
-namespace CallCenter\Bundle\CommonBundle\Embeddable;
+namespace CallCenter\CommonBundle\Embeddable;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -9,4 +9,19 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Phone
 {
+    /*
+     * @ORM\Column(
+     *      name="phone_number",
+     *      type="integer"
+     * )
+     */
+    private $phoneNumber;
+
+    /*
+     * @ORM\Column(
+     *      name="description",
+     *      type="string"
+     * )
+     */
+    private $description;
 }
