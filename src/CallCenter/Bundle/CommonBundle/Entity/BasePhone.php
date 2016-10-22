@@ -2,7 +2,7 @@
 
 namespace CallCenter\CommonBundle\Entity;
 
-use Date;
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use CallCenter\CommonBundle\Embeddable\Phone as PhoneEmbeddable;

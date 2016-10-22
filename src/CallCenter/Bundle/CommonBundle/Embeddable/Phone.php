@@ -10,19 +10,18 @@ use Doctrine\ORM\Mapping as ORM;
 class Phone
 {
     /*
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
-    */
-    private $id;
-
-    /*
-     * @ORM\Column(name="phone_number", type="integer")
+     * @ORM\Column(
+     *      name="phone_number",
+     *      type="integer"
+     * )
      */
     private $phoneNumber;
 
     /*
-     * @ORM\Column(name="description", type="string")
+     * @ORM\Column(
+     *      name="description",
+     *      type="string"
+     * )
      */
     private $description;
 }

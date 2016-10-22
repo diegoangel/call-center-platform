@@ -6,31 +6,50 @@ use CallCenter\CommonBundle\Model\Contact;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /*
- * @ORM\Entity
+ * @ORM\MappedSuperclass
+ * @Gedmo\SoftDeleteable(
+ *      fieldName="deleted_at",
+ *      timeAware=false
+ * )
  */
 abstract class BaseContact extends Contact
 {
     /*
-     * @ORN\Column(name="", type="")
+     * @ORN\Column(
+     *      name="id",
+     *      type="integer"
+     * )
      * @ORM\Id
-     * @ORM\GEneratedValue(strategy="IDENTITY)
+     * @ORM\GeneratedValue(
+     *      strategy="IDENTITY
+     * )
      */
     private $id;
 
     /*
-     * @ORM\Column(name="first_name", type="string")
+     * @ORM\Column(
+     *      name="first_name",
+     *      type="string"
+     * )
      */
     private $firstName;
 
     /*
-     * @ORM\Column(name="last_name", type="string")
+     * @ORM\Column(
+     *      name="last_name",
+     *      type="string"
+     * )
      */
     private $lastName;
 
     /*
-     * @ORM\Column(name="phone_id" type="integer")
+     * @ORM\Column(
+     *      name="phone_id",
+     *      type="integer"
+     * )
      */
     private $phones;
 
