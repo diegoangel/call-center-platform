@@ -1,13 +1,13 @@
 <?php
 
-namespace CallCenterBundleCommonBundle\Entity;
+namespace CallCenter\Bundle\CommonBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Fresh\DoctrineEnumBundle\Validator\Constraints as DoctrineAssert;
-use CallCenterBundleCommonBundle\DBAL\Types\GenderType;
+use CallCenter\Bundle\CommonBundle\DBAL\Types\GenderType;
 
 /*
  * @ORM\MappedSuperclass

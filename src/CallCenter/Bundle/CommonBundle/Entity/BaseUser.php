@@ -1,6 +1,6 @@
 <?php
 
-namespace CallCenterBundleCommonBundle\Entity;
+namespace CallCenter\Bundle\CommonBundle\Entity;
 
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;

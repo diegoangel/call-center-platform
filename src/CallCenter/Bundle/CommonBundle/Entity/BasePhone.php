@@ -1,11 +1,11 @@
 <?php
 
-namespace CallCenterBundleCommonBundle\Entity;
+namespace CallCenter\Bundle\CommonBundle\Entity;
 
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
-use CallCenterBundleCommonBundle\Embeddable\Phone as PhoneEmbeddable;
+use CallCenter\Bundle\CommonBundle\Embeddable\Phone as PhoneEmbeddable;
 
 /**
  * @ORM\MappedSuperclass
