@@ -1,12 +1,13 @@
 <?php
 
-namespace CallCenter\CommonBundle\Entity;
+namespace CallCenter\Bundle\CommonBundle\Entity;
 
-use CallCenter\CommonBundle\Model\Contact;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Fresh\DoctrineEnumBundle\Validator\Constraints as DoctrineAssert;
+use CallCenter\Bundle\CommonBundle\DBAL\Types\GenderType;
 
 /*
  * @ORM\MappedSuperclass
@@ -15,7 +16,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  *      timeAware=false
  * )
  */
-abstract class BaseContact extends Contact
+abstract class BaseContact
 {
     /*
      * @ORN\Column(
@@ -27,7 +28,7 @@ abstract class BaseContact extends Contact
      *      strategy="IDENTITY
      * )
      */
-    private $id;
+    protected $id;
 
     /*
      * @ORM\Column(
@@ -35,7 +36,7 @@ abstract class BaseContact extends Contact
      *      type="string"
      * )
      */
-    private $firstName;
+    protected $firstName;
 
     /*
      * @ORM\Column(
@@ -43,7 +44,7 @@ abstract class BaseContact extends Contact
      *      type="string"
      * )
      */
-    private $lastName;
+    protected $lastName;
 
     /*
      * @ORM\Column(
@@ -51,7 +52,7 @@ abstract class BaseContact extends Contact
      *      type="integer"
      * )
      */
-    private $phones;
+    protected $phones;
 
     /*
      * @ORM\Column(
@@ -60,6 +61,6 @@ abstract class BaseContact extends Contact
      *      nullable=true
      * )
      */
-    private $deletedAt;
+    protected $deletedAt;
 
 }

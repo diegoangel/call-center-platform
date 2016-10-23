@@ -1,11 +1,11 @@
 <?php
 
-namespace CallCenter\CommonBundle\Entity;
+namespace CallCenter\Bundle\CommonBundle\Entity;
 
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
-use CallCenter\CommonBundle\Embeddable\Phone as PhoneEmbeddable;
+use CallCenter\Bundle\CommonBundle\Embeddable\Phone as PhoneEmbeddable;
 
 /**
  * @ORM\MappedSuperclass
@@ -26,7 +26,7 @@ abstract class BasePhone
      *      strategy="IDENTITY"
      * )
      */
-    private $id;
+    protected $id;
 
     /**
      * @ORM\ManyToOne(
@@ -38,14 +38,14 @@ abstract class BasePhone
      *      referencedColumnName="id"
      * )
      */
-    private $contact;
+    protected $contact;
 
     /**
-     * @Embedded(
+     * @ORM\Embedded(
      *      class=PhoneEmbeddable"
      * )
      */
-    private $phone;
+    protected $phone;
 
     /**
      * @ORM\Column(
@@ -54,5 +54,5 @@ abstract class BasePhone
      *      nullable=true
      * )
      */
-    private $deletedAt;
+    protected $deletedAt;
 }

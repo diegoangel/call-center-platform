@@ -1,6 +1,6 @@
 <?php
 
-namespace CallCenter\CommonBundle\Entity;
+namespace CallCenter\Bundle\CommonBundle\Entity;
 
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
@@ -23,5 +23,5 @@ abstract class BaseUser extends FOSUser
      *      nullable=true
      * )
      */
-    private $deletedAt;
+    protected $deletedAt;
 }
