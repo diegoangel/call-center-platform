@@ -1,6 +1,6 @@
 <?php
 
-namespace CallCenter\CommonBundle\Embeddable;
+namespace CallCenterBundleCommonBundle\Embeddable;
 
 use Doctrine\ORM\Mapping as ORM;
 

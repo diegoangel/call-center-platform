@@ -1,6 +1,6 @@
 <?php
 
-namespace CallCenter\CommonBundle\Controller;
+namespace CallCenterBundleCommonBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

@@ -1,6 +1,6 @@
 <?php
 
-namespace CallCenter\CommonBundle\DBAL\Types;
+namespace CallCenterBundleCommonBundle\DBAL\Types;
 
 use Fresh\DoctrineEnumBundle\DBAL\Types\AbstractEnumType;
 
