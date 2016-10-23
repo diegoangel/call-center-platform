@@ -6,17 +6,13 @@ use Fresh\DoctrineEnumBundle\DBAL\Types\AbstractEnumType;
 
 final class BankAccountType extends AbstractEnumType
 {
-    const POINT_GUARD    = 'PG';
-    const SHOOTING_GUARD = 'SG';
-    const SMALL_FORWARD  = 'SF';
-    const POWER_FORWARD  = 'PF';
-    const CENTER         = 'C';
+    const CAJA_AHORRO    = 'CA';
+    const CUENTA_CORRIENTE = 'CC';
+    const JUDICIALES  = 'J';
 
     protected static $choices = [
-        self::POINT_GUARD    => 'Point Guard',
-        self::SHOOTING_GUARD => 'Shooting Guard',
-        self::SMALL_FORWARD  => 'Small Forward',
-        self::POWER_FORWARD  => 'Power Forward',
-        self::CENTER         => 'Center'
+        self::CAJA_AHORRO    => 'Caja de Ahorro',
+        self::CUENTA_CORRIENTE => 'Cuenta Corriente',
+        self::JUDICIALES  => 'Judiciales',
     ];
 }
