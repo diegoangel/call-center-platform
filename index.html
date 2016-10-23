@@ -31,9 +31,45 @@
         <h1>
 <a id="call-center-platform" class="anchor" href="#call-center-platform" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Call Center Platform</h1>
 
-<p><a href="https://travis-ci.org/diegoangel/call-center-common-bundle"><img src="https://travis-ci.org/diegoangel/call-center-common-bundle.svg?branch=master" alt="Build Status"></a></p>
+<p><a href="https://travis-ci.org/diegoangel/call-center-platform"><img src="https://travis-ci.org/diegoangel/call-center-platform.svg?branch=master" alt="Build Status"></a>
+<a href="https://scrutinizer-ci.com/g/diegoangel/call-center-platform/?branch=master"><img src="https://scrutinizer-ci.com/g/diegoangel/call-center-platform/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"></a></p>
 
-<p>A Symfony project created on October 12, 2016, 2:22 am.</p>
+<p><a href="https://insight.sensiolabs.com/projects/4b444c8f-b095-4174-a333-11477268f697"><img src="https://insight.sensiolabs.com/projects/4b444c8f-b095-4174-a333-11477268f697/small.png" alt="SensioLabsInsight"></a></p>
+
+<h3>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h3>
+
+<p>This bundle was created for building symfony web applications to be used as a frontend by call center sales agents and as backend by team leaders and managers. It has features to manage contacts, sales, users, reports, etc ...</p>
+
+<p>It depends on several others bundles that you have to install along with this. 
+Likewise, this bundle is made up of components and one or more bundles using this components and exposing its logic through Symfony services.</p>
+
+<h3>
+<a id="register-the-bundle" class="anchor" href="#register-the-bundle" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Register the bundle</h3>
+
+<p>To start using the bundle, register it in <code>app/AppKernel.php</code>:</p>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-k">public</span> <span class="pl-k">function</span> <span class="pl-en">registerBundles</span>()</span>
+<span class="pl-s1">{</span>
+<span class="pl-s1">    <span class="pl-smi">$bundles</span> <span class="pl-k">=</span> [</span>
+<span class="pl-s1">        <span class="pl-c">// Other bundles...</span></span>
+<span class="pl-s1">        <span class="pl-k">new</span> <span class="pl-c1">Fresh\DoctrineEnumBundle\</span><span class="pl-c1">FreshDoctrineEnumBundle</span>(),</span>
+<span class="pl-s1">        <span class="pl-k">new</span> <span class="pl-c1">FOS\RestBundle\</span><span class="pl-c1">FOSRestBundle</span>(),</span>
+<span class="pl-s1">        <span class="pl-k">new</span> <span class="pl-c1">FOS\UserBundle\</span><span class="pl-c1">FOSUserBundle</span>(),</span>
+<span class="pl-s1">        <span class="pl-k">new</span> <span class="pl-c1">FOS\JsRoutingBundle\</span><span class="pl-c1">FOSJsRoutingBundle</span>(),</span>
+<span class="pl-s1">        <span class="pl-k">new</span> <span class="pl-c1">Ivory\CKEditorBundle\</span><span class="pl-c1">IvoryCKEditorBundle</span>(),</span>
+<span class="pl-s1">        <span class="pl-k">new</span> <span class="pl-c1">Stof\DoctrineExtensionsBundle\</span><span class="pl-c1">StofDoctrineExtensionsBundle</span>(),        </span>
+<span class="pl-s1">        <span class="pl-k">new</span> <span class="pl-c1">CallCenter\Bundle\</span><span class="pl-c1">CommonBundle</span>(),</span>
+<span class="pl-s1">    ];</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">    <span class="pl-c">//...</span></span>
+<span class="pl-s1">    <span class="pl-k">if</span> (<span class="pl-c1">in_array</span>(<span class="pl-smi">$this</span><span class="pl-k">-&gt;</span>getEnvironment(), [<span class="pl-s"><span class="pl-pds">'</span>dev<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>test<span class="pl-pds">'</span></span>])) {</span>
+<span class="pl-s1">        <span class="pl-c">//...    </span></span>
+<span class="pl-s1">    }    </span>
+<span class="pl-s1">}</span></pre></div>
+
+<h3>
+<a id="configure-the-bundle" class="anchor" href="#configure-the-bundle" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configure the bundle</h3>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/diegoangel">diegoangel</a></p>
