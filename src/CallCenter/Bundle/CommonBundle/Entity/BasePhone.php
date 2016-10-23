@@ -41,7 +41,7 @@ abstract class BasePhone
     protected $contact;
 
     /**
-     * @Embedded(
+     * @ORM\Embedded(
      *      class=PhoneEmbeddable"
      * )
      */
