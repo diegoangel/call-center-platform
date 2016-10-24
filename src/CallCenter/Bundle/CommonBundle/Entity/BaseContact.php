@@ -2,23 +2,27 @@
 
 namespace CallCenter\Bundle\CommonBundle\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Fresh\DoctrineEnumBundle\Validator\Constraints as DoctrineAssert;
+use CallCenter\Bundle\CommonBundle\Traits\TimestampableEntity;
+use CallCenter\Bundle\CommonBundle\Traits\SoftDeleteableEntity;
 use CallCenter\Bundle\CommonBundle\DBAL\Types\GenderType;
 
-/*
+/**
  * @ORM\MappedSuperclass
  * @Gedmo\SoftDeleteable(
  *      fieldName="deleted_at",
  *      timeAware=false
  * )
+ * @Gedmo\Loggable
  */
 abstract class BaseContact
 {
-    /*
+    use SoftDeleteableEntity;
+    use TimestampableEntity;
+
+    /**
      * @ORN\Column(
      *      name="id",
      *      type="integer"
@@ -30,7 +34,7 @@ abstract class BaseContact
      */
     protected $id;
 
-    /*
+    /**
      * @ORM\Column(
      *      name="first_name",
      *      type="string"
@@ -38,7 +42,7 @@ abstract class BaseContact
      */
     protected $firstName;
 
-    /*
+    /**
      * @ORM\Column(
      *      name="last_name",
      *      type="string"
@@ -46,7 +50,16 @@ abstract class BaseContact
      */
     protected $lastName;
 
-    /*
+    /**
+     * @ORM\Column(
+     *      name="email",
+     *      type="string"
+     * )
+     * @Gedmo\Versioned
+     */
+    protected $email;
+
+    /**
      * @ORM\Column(
      *      name="phone_id",
      *      type="integer"
@@ -54,13 +67,15 @@ abstract class BaseContact
      */
     protected $phones;
 
-    /*
+    /**
      * @ORM\Column(
-     *      name="deleted_at",
-     *      type="datetime",
-     *      nullable=true
+     *      name="gender",
+     *      type="GenderType",
+     *      nullable=false
+     * )
+     * @DoctrineAssert\Enum(
+     *      entity="CallCenter\Bundle\CommonBundle\DBAL\Types\GenderType"
      * )
      */
-    protected $deletedAt;
-
+    protected $gender;
 }

@@ -2,10 +2,10 @@
 
 namespace CallCenter\Bundle\CommonBundle\Entity;
 
-use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use FOS\UserBundle\Model\User as FOSUser;
+use CallCenter\Bundle\CommonBundle\Traits\SoftDeleteableEntity;
 
 /**
  * @ORM\MappedSuperclass
@@ -16,12 +16,17 @@ use FOS\UserBundle\Model\User as FOSUser;
  */
 abstract class BaseUser extends FOSUser
 {
+    use SoftDeleteableEntity;
+
     /**
-     * @ORM\Column(
-     *      name="delete_at",
-     *      type="datetime",
-     *      nullable=true
+     * @ORN\Column(
+     *      name="id",
+     *      type="integer"
+     * )
+     * @ORM\Id
+     * @ORM\GeneratedValue(
+     *      strategy="IDENTITY
      * )
      */
-    protected $deletedAt;
+    protected $id;
 }
