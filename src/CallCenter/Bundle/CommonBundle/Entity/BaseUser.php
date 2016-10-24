@@ -19,7 +19,7 @@ abstract class BaseUser extends FOSUser
     use SoftDeleteableEntity;
 
     /**
-     * @ORN\Column(
+     * @ORM\Column(
      *      name="id",
      *      type="integer"
      * )
