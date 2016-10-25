@@ -2,6 +2,7 @@
 
 namespace CallCenter\Bundle\CommonBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Fresh\DoctrineEnumBundle\Validator\Constraints as DoctrineAssert;
@@ -39,6 +40,7 @@ abstract class BaseContact
      *      name="first_name",
      *      type="string"
      * )
+     * @Assert\NotBlank()
      */
     protected $firstName;
 
@@ -47,6 +49,7 @@ abstract class BaseContact
      *      name="last_name",
      *      type="string"
      * )
+     * @Assert\NotBlank()
      */
     protected $lastName;
 
