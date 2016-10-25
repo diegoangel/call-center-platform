@@ -31,7 +31,7 @@ abstract class BasePhone
 
     /**
      * @ORM\ManyToOne(
-     *      targetEntity="BaseContact",
+     *      targetEntity="CallCenter\Bundle\CommonBundle\Entity\BaseContact",
      *      inversedBy="phones"
      * )
      * @ORM\JoinColumn(
