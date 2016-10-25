@@ -4,7 +4,7 @@ namespace CallCenter\Bundle\CommonBundle\DBAL\Types;
 
 use Fresh\DoctrineEnumBundle\DBAL\Types\AbstractEnumType;
 
-final class IdentityDocumentTypeType extends AbstractEnumType
+final class IdentityDocumentType extends AbstractEnumType
 {
     const DNI = 'DNI';
     const LE = 'LE';

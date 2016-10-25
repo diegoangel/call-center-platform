@@ -2,9 +2,9 @@
 
 namespace CallCenter\Bundle\CommonBundle\Entity;
 
-use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use CallCenter\Bundle\CommonBundle\Traits\SoftDeleteableEntity;
 use CallCenter\Bundle\CommonBundle\Embeddable\Phone as PhoneEmbeddable;
 
 /**
@@ -16,6 +16,8 @@ use CallCenter\Bundle\CommonBundle\Embeddable\Phone as PhoneEmbeddable;
  */
 abstract class BasePhone
 {
+    use SoftDeleteableEntity;
+
     /**
      * @ORM\Id
      * @ORM\Column(
@@ -46,13 +48,4 @@ abstract class BasePhone
      * )
      */
     protected $phone;
-
-    /**
-     * @ORM\Column(
-     *      name="delete_at",
-     *      type="datetime",
-     *      nullable=true
-     * )
-     */
-    protected $deletedAt;
 }
