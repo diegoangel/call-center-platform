@@ -5,7 +5,6 @@ namespace CallCenter\Bundle\CommonBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use CallCenter\Bundle\CommonBundle\Traits\SoftDeleteableEntity;
-use CallCenter\Bundle\CommonBundle\Embeddable\Phone as PhoneEmbeddable;
 
 /**
  * @ORM\MappedSuperclass
@@ -44,7 +43,7 @@ abstract class BasePhone
 
     /**
      * @ORM\Embedded(
-     *      class=PhoneEmbeddable"
+     *      class="PhoneEmbeddable"
      * )
      */
     protected $phone;
