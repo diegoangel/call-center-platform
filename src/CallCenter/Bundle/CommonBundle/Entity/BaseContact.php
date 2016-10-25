@@ -23,7 +23,7 @@ abstract class BaseContact
     use TimestampableEntity;
 
     /**
-     * @ORN\Column(
+     * @ORM\Column(
      *      name="id",
      *      type="integer"
      * )
