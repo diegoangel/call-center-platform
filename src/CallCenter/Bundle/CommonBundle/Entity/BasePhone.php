@@ -43,7 +43,7 @@ abstract class BasePhone
 
     /**
      * @ORM\Embedded(
-     *      class="PhoneEmbeddable"
+     *      class="CallCenter\Bundle\CommonBundle\Entity\Embeddable\PhoneEmbeddable"
      * )
      */
     protected $phone;
