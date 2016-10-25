@@ -5,7 +5,7 @@ namespace CallCenter\Bundle\CommonBundle\Entity;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
-use Fresh\DoctrineEnumBundle\Validator\Constraints as DoctrineAssert;
+use Fresh\DoctrineEnumBundle\Validator\Constraints as Assert;
 use CallCenter\Bundle\CommonBundle\Traits\TimestampableEntity;
 use CallCenter\Bundle\CommonBundle\Traits\SoftDeleteableEntity;
 use CallCenter\Bundle\CommonBundle\DBAL\Types\GenderType;
