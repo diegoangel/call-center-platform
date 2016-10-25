@@ -28,7 +28,7 @@ class AddressEmbeddable
     private $postalCode;
 
     /**
-      * @ORM\Column(
+     * @ORM\Column(
      *      name="city",
      *      type="string"
      * )
